@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "origens",
+  "info": {
+    "singularName": "origen",
+    "pluralName": "origens",
+    "displayName": "Origen"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Pais": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 20,
+      "minLength": 4
+    }
+  }
+}
