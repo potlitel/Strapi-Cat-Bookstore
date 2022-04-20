@@ -1,5 +1,5 @@
 {
-  "name": "strapi-cat-bookstore",
+  "name": "backend",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -20,7 +20,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "4b5d7f4c-f965-4fa7-a077-35ae23c5ad9e"
+    "uuid": "ed1e7c1e-b75d-4fba-bcbf-2f6e1a3e077f"
   },
   "engines": {
     "node": ">=12.x.x <=16.x.x",

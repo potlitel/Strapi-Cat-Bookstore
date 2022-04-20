@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "razas",
+  "info": {
+    "singularName": "raza",
+    "pluralName": "razas",
+    "displayName": "Raza",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 4,
+      "maxLength": 30
+    }
+  }
+}
