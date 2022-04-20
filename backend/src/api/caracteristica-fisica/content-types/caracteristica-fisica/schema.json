@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "caracteristicas_fisicas",
+  "info": {
+    "singularName": "caracteristica-fisica",
+    "pluralName": "caracteristicas-fisicas",
+    "displayName": "CaracteristicasFisicas"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 20,
+      "minLength": 4
+    }
+  }
+}
