@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipo_pelos",
+  "info": {
+    "singularName": "tipo-pelo",
+    "pluralName": "tipo-pelos",
+    "displayName": "TipoPelo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 10,
+      "minLength": 5
+    }
+  }
+}

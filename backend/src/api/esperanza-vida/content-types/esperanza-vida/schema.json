@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "esperanza_vidas",
+  "info": {
+    "singularName": "esperanza-vida",
+    "pluralName": "esperanza-vidas",
+    "displayName": "EsperanzaVida"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "valor": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 4,
+      "maxLength": 12
+    }
+  }
+}

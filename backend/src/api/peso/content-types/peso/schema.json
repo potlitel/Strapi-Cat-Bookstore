@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pesos",
+  "info": {
+    "singularName": "peso",
+    "pluralName": "pesos",
+    "displayName": "Peso",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "valor": {
+      "type": "string",
+      "required": true,
+      "maxLength": 10,
+      "minLength": 4,
+      "unique": true
+    }
+  }
+}
