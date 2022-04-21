@@ -23,3 +23,7 @@ https://www.codegrepper.com/code-examples/javascript/how+to+hide+a+div+containin
 
 https://blog.logrocket.com/axios-vs-fetch-best-http-requests/
 https://blog.logrocket.com/understanding-axios-post-requests/
+
+
+https://www.w3docs.com/snippets/css/how-to-vertically-align-text-next-to-an-image.html#:~:text=Put%20the%20image's%20maximum%20width,on%20the%20text's%20left%20side.
+https://stackoverflow.com/questions/35101813/vertical-middle-aligned-image-and-text-side-by-side-in-css

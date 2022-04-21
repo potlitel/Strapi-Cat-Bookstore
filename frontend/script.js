@@ -11,6 +11,7 @@ async function getUser(username) {
         //data.bio = !!data.bio !== false ? data.bio : 'No description' ;
         console.info(data)
         createUserCard(data)
+        addCaracteristicaToCard(data)
         //getRepos(username)
 
     } catch(err) {
@@ -37,19 +38,40 @@ function createUserCard(user) {
             <div>
              <img src="${APIURL}${user.data.attributes.perfil_image.data.attributes.url}" alt="${user.data.attributes.raza.data.attributes.nombre}" class="avatar">
             </div>
+          
             <div class="user-info">
-                <h2>Raza: ${user.data.attributes.raza.data.attributes.nombre}</h2>
-                <p>Origen: ${user.data.attributes.origen.data.attributes.Pais}</p>
-                <p>Clasificación FIFE: ${user.data.attributes.clasificacion_fife.data.attributes.nombre}</p>
-                <p>Clima: ${user.data.attributes.clima.data.attributes.nombre}</p>
-                <p>Tamaño: ${user.data.attributes.tamano.data.attributes.valor}</p>
-                <p>Peso: ${user.data.attributes.peso.data.attributes.valor}</p>
-                <p>Esperanza de vida: ${user.data.attributes.esperanza_vida.data.attributes.valor}</p>
+                    <h2>Raza: ${user.data.attributes.raza.data.attributes.nombre}</h2>
+                <div class="container1">
+                    <div class="image"><img src="./img/Cat-29.png" width="32" height="32"className="photo" /></div>
+                    <div class="text"><p>Origen: ${user.data.attributes.origen.data.attributes.Pais}</p></div>
+                </div>
+                <div class="container1">
+                    <div class="image"><img src="./img/Cat-29.png" width="32" height="32"className="photo" /></div>
+                    <p>Clasificación FIFE: ${user.data.attributes.clasificacion_fife.data.attributes.nombre}</p>
+                </div>
+                <div class="container1">
+                    <div class="image"><img src="./img/Cat-29.png" width="32" height="32"className="photo" /></div>
+                    <p>Clima: ${user.data.attributes.clima.data.attributes.nombre}</p>
+                </div>
+                <div class="container1">
+                    <div class="image"><img src="./img/Cat-29.png" width="32" height="32"className="photo" /></div>
+                    <p>Tamaño: ${user.data.attributes.tamano.data.attributes.valor}</p>
+                </div>
+                <div class="container1">
+                    <div class="image"><img src="./img/Cat-29.png" width="32" height="32"className="photo" /></div>
+                    <p>Peso: ${user.data.attributes.peso.data.attributes.valor}</p>
+                </div>
+                <div class="container1">
+                    <div class="image"><img src="./img/Cat-29.png" width="32" height="32"className="photo" /></div>
+                    <p>Esperanza de vida: ${user.data.attributes.esperanza_vida.data.attributes.valor}</p>
+                </div>
                 <ul>
                     <li>${user.followers} <strong>Followers</strong></li>
                     <li>${user.following} <strong>Following</strong></li>
                     <li>${user.public_repos} <strong>Repos</strong></li>
                 </ul>
+
+               
 
             <div id="repos"></div>   
             </div>
@@ -87,17 +109,15 @@ function addReposToCard(repos) {
 function addCaracteristicaToCard(repos) {
     const reposEl = document.getElementById('repos')
 
-    repos.slice(0, 12).forEach(repo => {
+    repos.data.attributes.caracters.data.slice(0, 12).forEach(repo => {
             const repoEl = document.createElement('a')
             repoEl.classList.add('repo')
-            //repoEl.href = repo.html_url
+            repoEl.href = 'https://www.google.com/search?q='+repo.attributes.valor
             repoEl.target = '_blank'
-            repoEl.innerText = repo.data.attributes.caracteristicas_fisicas.data.attributes.valor
+            repoEl.innerText = repo.attributes.valor
 
             reposEl.appendChild(repoEl)
-        
     })
-
 }
 
 form.addEventListener('submit', (e) => {
