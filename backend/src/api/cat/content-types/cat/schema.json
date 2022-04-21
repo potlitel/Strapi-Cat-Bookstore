@@ -20,7 +20,7 @@
     "Salud": {
       "type": "richtext",
       "required": true,
-      "minLength": 100
+      "minLength": 40
     },
     "Nutricion": {
       "type": "richtext",
@@ -86,6 +86,11 @@
       ]
     },
     "descripcion": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 100
+    },
+    "Personalidad": {
       "type": "richtext",
       "required": true,
       "minLength": 100
