@@ -1,4 +1,6 @@
-const APIURL = 'https://api.github.com/users/'
+const APIURL = 'http://localhost:1337'
+let value;
+const CatsAPIURL = 'http://localhost:1337/api/cats/'
 
 const form = document.getElementById('form')
 const search = document.getElementById('search')
@@ -6,15 +8,15 @@ const main = document.getElementById('main')
 
 async function getUser(username) {
     try {
-        const {data} = await axios(APIURL + username)
-        data.bio = !!data.bio !== false ? data.bio : 'No description' ;
-
+        const {data} = await axios(CatsAPIURL+username+"?populate=raza,perfil_image")
+        //data.bio = !!data.bio !== false ? data.bio : 'No description' ;
+        console.info(data)
         createUserCard(data)
-        getRepos(username)
+        //getRepos(username)
 
     } catch(err) {
         if(err.response.status == 404) {
-            createErrorCard('No profile with this username')  
+            createErrorCard('No se ha encontrado ninguna raza de gatos que coincida con el criterio de búsqueda especificado')  
         }
     }     
 }
@@ -34,10 +36,10 @@ function createUserCard(user) {
     const cardHTML = `
         <div class="card">
             <div>
-             <img src="${user.avatar_url}" alt="${user.name}" class="avatar">
+             <img src="${APIURL}${user.data.attributes.perfil_image.data.attributes.url}" alt="${user.data.attributes.raza.data.attributes.nombre}" class="avatar">
             </div>
             <div class="user-info">
-                <h2>${user.name}</h2>
+                <h2>${user.data.attributes.raza.data.attributes.nombre}</h2>
                 <p>${user.bio}</p>
                 <ul>
                     <li>${user.followers} <strong>Followers</strong></li>
