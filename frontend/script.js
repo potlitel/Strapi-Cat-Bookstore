@@ -8,12 +8,9 @@ const main = document.getElementById('main')
 async function getUser(username) {
     try {
         const {data} = await axios(APIURL+CatsAPIURLEndPoint+username+"?populate=*")
-        //data.bio = !!data.bio !== false ? data.bio : 'No description' ;
         console.info(data)
         createUserCard(data)
         addCaracteristicaToCard(data)
-        //getRepos(username)
-
     } catch(err) {
         if(err.response.status == 404) {
             createErrorCard('No se ha encontrado ninguna raza de gatos que coincida con el criterio de búsqueda especificado')  
@@ -21,16 +18,6 @@ async function getUser(username) {
     }     
 }
 
-async function getRepos(username){
-    try {
-        const {data} = await axios(APIURL + username + '/repos?sort=created')
-
-        addReposToCard(data)
-
-    } catch(err){
-            createErrorCard('Problem fetching repos')
-    }   
-}
 
 function createUserCard(user) {
     const cardHTML = `
@@ -64,16 +51,14 @@ function createUserCard(user) {
                 <div class="container1">
                     <div class="image"><img src="./img/Cat-29.png" width="32" height="32"className="photo" /></div>
                     <p>Esperanza de vida: ${user.data.attributes.esperanza_vida.data.attributes.valor}</p>
+                </div>               
+
+            <div id="caracter">
+                <div class="container1">
+                    <div class="image"><img src="./img/Cat-29.png" width="32" height="32"className="photo" /></div>
+                    <p>Caracter:</p>
                 </div>
-                <ul>
-                    <li>${user.followers} <strong>Followers</strong></li>
-                    <li>${user.following} <strong>Following</strong></li>
-                    <li>${user.public_repos} <strong>Repos</strong></li>
-                </ul>
-
-               
-
-            <div id="repos"></div>   
+            </div>   
             </div>
         </div>
     `
@@ -90,31 +75,15 @@ function createErrorCard(msg) {
     main.innerHTML = cardHTML
 }
 
-function addReposToCard(repos) {
-    const reposEl = document.getElementById('repos')
+function addCaracteristicaToCard(caracters) {
+    const reposEl = document.getElementById('caracter')
 
-    repos.slice(0, 12).forEach(repo => {
+    caracters.data.attributes.caracters.data.slice(0, 12).forEach(caracter => {
             const repoEl = document.createElement('a')
             repoEl.classList.add('repo')
-            repoEl.href = repo.html_url
+            repoEl.href = 'https://www.google.com/search?q='+caracter.attributes.valor
             repoEl.target = '_blank'
-            repoEl.innerText = repo.name
-
-            reposEl.appendChild(repoEl)
-        
-    })
-
-}
-
-function addCaracteristicaToCard(repos) {
-    const reposEl = document.getElementById('repos')
-
-    repos.data.attributes.caracters.data.slice(0, 12).forEach(repo => {
-            const repoEl = document.createElement('a')
-            repoEl.classList.add('repo')
-            repoEl.href = 'https://www.google.com/search?q='+repo.attributes.valor
-            repoEl.target = '_blank'
-            repoEl.innerText = repo.attributes.valor
+            repoEl.innerText = caracter.attributes.valor
 
             reposEl.appendChild(repoEl)
     })
