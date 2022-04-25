@@ -1,5 +1,10 @@
 # Strapi-Cat-Bookstore
 
+
+## Links
+
++  Backend of Vidly, an imaginary video rental app <https://github.com/mosh-hamedani/vidly-api-node>
+
 https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/rest/populating-fields.html#field-selection
 https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/rest-api.html#get-an-entry
 https://stackoverflow.com/questions/70301738/no-relational-fields-in-response-strapi-v4

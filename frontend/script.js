@@ -68,7 +68,10 @@ function createUserCard(user) {
 function createErrorCard(msg) {
     const cardHTML = `
         <div class="card">
-            <h1>${msg}</h1>
+            <div class="container1">
+                <div class="image"><img src="./img/png-transparent-cat-no-symbol-no-cats-allowed-sign-mammal-cat-like-mammal-carnivoran-thumbnail.png" className="photo" /></div>
+                <h1>${msg}</h1>
+            </div>
         </div>
     `
 
