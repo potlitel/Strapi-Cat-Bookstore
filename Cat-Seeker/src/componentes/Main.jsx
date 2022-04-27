@@ -1,3 +1,4 @@
+import { Input } from '@chakra-ui/react'
 import '../css/style.css'
 
 function App() {
@@ -5,9 +6,7 @@ function App() {
   return (
       
     <div>          
-        <form className="user-form" id="form">
-            <input type="text" id="search" placeholder='Busca una raza de gatos'/>
-        </form>      
+          <Input htmlSize={4} size='lg' width='lg' variant='outline' placeholder='Busca una raza de gatos' onSubmit={() => console.log('aaa')}/>  
     </div>
   )
 }
