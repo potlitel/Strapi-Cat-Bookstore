@@ -263,7 +263,7 @@ Note that strapicatbookstore is the name of the image, and using :1.1 can be any
 
 This will create an image called bestbackendever and be version 1.1
 
-Now go get some ☕️ and sit back while Docker does its magic 🐳 🪄 = ❤️
+Now go get some ☕️ and 💺 while 🐳 does its magic 🐳 = ❤️
 
 Once this is completed as it can take a bit of time (Normally a few minutes ☕️) then we can run our project using the following command.
 
