@@ -71,7 +71,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## :bowtie: About The Project
+## 👨‍🏫 About The Project
 
 <img src="images/" alt="Logo" width="640" height="180">
 
