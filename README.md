@@ -125,7 +125,7 @@ yarn build
 
 Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
 
-### Prerequisites
+### 🚦 Prerequisites
 
 1. First you need to check if you have installed the .NET Core 6.0 SDK with the following .NET CLI (Command-Line Interface) command:
 
@@ -263,6 +263,20 @@ Note that strapicatbookstore is the name of the image, and using :1.1 can be any
 This will create an image called bestbackendever and be version 1.1
 
 Now go get some ☕️ and sit back while Docker does its magic 🐳 🪄 = ❤️
+
+Once this is completed as it can take a bit of time (Normally a few minutes ☕️) then we can run our project using the following command.
+
+```powershell
+docker run -d -p 1337:1337 strapicatbookstore:1.1
+```
+This tells Docker to run the image mystrapi or whatever you called your project 🤔 on port 1337 -d means detached and is a fancy word of saying "Runs in the background"
+
+Cool tip if you want to use strapi on a different port while developing you can change first part of the run port to something else like so
+
+docker run -d -p 8080:1337 mystrapi
+
+And it will now run on port 8080 👍 😏
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
