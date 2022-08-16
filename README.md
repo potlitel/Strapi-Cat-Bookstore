@@ -80,7 +80,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Built With
+### 🧱 Built With
 
 * [Strapi](https://strapi.io/)
 
@@ -141,7 +141,7 @@ Strapi gives you many possible deployment options for your project. Find the one
 
 4. Finally, install the C# extension to get IntelliSense features in VSCode.
 
-### Installation
+### 🧩 Installation
 
 1. Clone the repo
    ```sh
