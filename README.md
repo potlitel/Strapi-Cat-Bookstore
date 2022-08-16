@@ -26,7 +26,7 @@
     <img src="images/logo-strapi-black-blue.png_71430fb155.png" alt="Logo" width="270" height="80">
   </a>
 
-<h3 align="center">Tailwindcss template - Django</h3>
+<h3 align="center">Cat-Bookstore - Strapi</h3>
 
 <p align="center">
     project_description
@@ -81,15 +81,49 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Dotnet 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+* [Strapi](https://strapi.io/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
-## Getting Started
+# 🚀 Getting started with Strapi
 
-This repo is a rich clone of [Creating a REST Web API in C# with ASP.NET Core 5.0 and Visual Studio Code](https://luis-hernandez.medium.com/creating-a-rest-web-api-in-c-with-asp-net-core-5-0-and-visual-studio-code-809ea7b4f815). Is an step-by-step guide to show you how to create a REST Web API in C# with ASP.NET Core 5.0 and Visual Studio Code. And how test it using either Swagger or a REST Client extension..
+Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+
+### `develop`
+
+Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+
+```
+npm run develop
+# or
+yarn develop
+```
+
+### `start`
+
+Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+
+```
+npm run start
+# or
+yarn start
+```
+
+### `build`
+
+Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
+
+```
+npm run build
+# or
+yarn build
+```
+
+## ⚙️ Deployment
+
+Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
 
 ### Prerequisites
 
@@ -207,6 +241,23 @@ List of resources I find helpful and would like to give credit to. I've included
 * [Understanding Axios POST requests](https://blog.logrocket.com/understanding-axios-post-requests/)
 * [How to Vertically Align a Text Next to the Image](https://www.w3docs.com/snippets/css/how-to-vertically-align-text-next-to-an-image.html#:~:text=Put%20the%20image's%20maximum%20width,on%20the%20text's%20left%20side.)
 * [vertical middle aligned image and text side-by-side in CSS](https://stackoverflow.com/questions/35101813/vertical-middle-aligned-image-and-text-side-by-side-in-css)
+
+## 📚 Learn more
+
+- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
+- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
+- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
+- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
+- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+
+Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+
+## ✨ Community
+
+- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
+- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
+- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
