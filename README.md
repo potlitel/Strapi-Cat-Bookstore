@@ -71,7 +71,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## :bowtie: About The Project
 
 <img src="images/" alt="Logo" width="640" height="180">
 
@@ -269,12 +269,13 @@ Once this is completed as it can take a bit of time (Normally a few minutes ☕�
 ```powershell
 docker run -d -p 1337:1337 strapicatbookstore:1.1
 ```
-This tells Docker to run the image mystrapi or whatever you called your project 🤔 on port 1337 -d means detached and is a fancy word of saying "Runs in the background"
+This tells Docker to run the image strapicatbookstore:1.1 or whatever you called your project 🤔 on port 1337, -d means detached and is a fancy word of saying "Runs in the background"
 
 Cool tip if you want to use strapi on a different port while developing you can change first part of the run port to something else like so
 
+```powershell
 docker run -d -p 8080:1337 mystrapi
-
+```
 And it will now run on port 8080 👍 😏
 
 
