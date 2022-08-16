@@ -152,8 +152,117 @@ Strapi gives you many possible deployment options for your project. Find the one
    ```
 3. Running the project
    ```js
-   dotnet watch run
+   npm run develop
    ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### 🐳 Installation using Docker
+#### Why Docker
+
+Docker helps developers build and ship higher-quality applications, faster." -- [What is Docker](https://www.docker.com/what-docker#copy1)
+
+#### Prerequisites
+
+I use [Oh My Zsh](https://github.com/ohmyzsh/oh-my-zsh) with the [Docker plugin](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#docker) for autocompletion of docker commands. YMMV.
+
+#### Linux
+
+The 3.10.x kernel is [the minimum requirement](https://docs.docker.com/engine/installation/binaries/#check-kernel-dependencies) for Docker.
+
+#### MacOS
+
+10.8 “Mountain Lion” or newer is required.
+
+#### Windows 10
+
+Hyper-V must be enabled in BIOS
+
+VT-D must also be enabled if available (Intel Processors).
+
+#### Windows Server
+
+Windows Server 2016 is the minimum version required to install docker and docker-compose. Limitations exist on this version, such as multiple virtual networks and Linux containers. Windows Server 2019 and later are recommended. 
+
+#### Installation
+#### Linux
+
+Run this quick and easy install script provided by Docker:
+
+```sh
+curl -sSL https://get.docker.com/ | sh
+```
+
+If you're not willing to run a random shell script, please see the [installation](https://docs.docker.com/engine/installation/linux/) instructions for your distribution.
+
+If you are a complete Docker newbie, you should follow the [series of tutorials](https://docs.docker.com/engine/getstarted/) now.
+
+#### macOS
+
+Download and install [Docker Community Edition](https://www.docker.com/community-edition). if you have Homebrew-Cask, just type `brew install --cask docker`. Or Download and install [Docker Toolbox](https://docs.docker.com/toolbox/overview/).  [Docker For Mac](https://docs.docker.com/docker-for-mac/) is nice, but it's not quite as finished as the VirtualBox install.  [See the comparison](https://docs.docker.com/docker-for-mac/docker-toolbox/).
+
+> **NOTE** Docker Toolbox is legacy. You should to use Docker Community Edition, See [Docker Toolbox](https://docs.docker.com/toolbox/overview/).
+Once you've installed Docker Community Edition, click the docker icon in Launchpad. Then start up a container:
+
+```sh
+docker run hello-world
+```
+
+That's it, you have a running Docker container.
+
+If you are a complete Docker newbie, you should probably follow the [series of tutorials](https://docs.docker.com/engine/getstarted/) now.
+
+#### Windows 10
+
+Instructions to install Docker Desktop for Windows can be found [here](https://docs.docker.com/desktop/windows/install/)
+
+Once installed, open powershell as administrator and run:
+
+```powershell
+# Display the version of docker installed:
+docker version
+# Pull, create, and run 'hello-world':
+docker run hello-world
+```
+
+To continue with this cheat sheet, right click the Docker icon in the system tray, and go to settings. In order to mount volumes, the C:/ drive will need to be enabled in the settings to that information can be passed into the containers (later described in this article). 
+
+To switch between Windows containers and Linux containers, right click the icon in the system tray and click the button to switch container operating system Doing this will stop the current containers that are running, and make them unaccessible until the container OS is switched back.
+
+Additionally, if you have WSL or WSL2 installed on your desktop, you might want to install the Linux Kernel for Windows. Instructions can be found [here](https://techcommunity.microsoft.com/t5/windows-dev-appconsult/using-wsl2-in-a-docker-linux-container-on-windows-to-run-a/ba-p/1482133). This requires the Windows Subsystem for Linux feature. This will allow for containers to be accessed by WSL operating systems, as well as the efficiency gain from running WSL operating systems in docker. It is also preferred to use [Windows terminal](https://docs.microsoft.com/en-us/windows/terminal/get-started) for this.
+
+#### Windows Server 2016 / 2019
+
+Follow Microsoft's instructions that can be found [here](https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server#install-docker)
+
+If using the latest edge version of 2019, be prepared to only work in powershell, as it is only a servercore image (no desktop interface). When starting this machine, it will login and go straight to a powershell window. It is reccomended to install text editors and other tools using [Chocolatey](https://chocolatey.org/install).
+
+After installing, these commands will work:
+
+```powershell
+# Display the version of docker installed:
+docker version
+# Pull, create, and run 'hello-world':
+docker run hello-world
+```
+
+Windows Server 2016 is not able to run Linux images. 
+
+Windows Server Build 2004 is capable of running both linux and windows containers simultaneously through Hyper-V isolation. When running containers, use the ```--isolation=hyperv``` command, which will isolate the container using a seperate kernel instance. 
+
+#### 👷‍♀ Let's build the image using Dockerfile
+
+We can now build this image in a simple way running the followind command
+
+```powershell
+docker build -t strapicatbookstore:1.1 .
+```
+
+Note that strapicatbookstore is the name of the image, and using :1.1 can be anything like an example docker build -t strapicatbookstore:1.1 .
+
+This will create an image called bestbackendever and be version 1.1
+
+Now go get some ☕️ and sit back while Docker does its magic 🐳 🪄 = ❤️
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -241,6 +350,7 @@ List of resources I find helpful and would like to give credit to. I've included
 * [Understanding Axios POST requests](https://blog.logrocket.com/understanding-axios-post-requests/)
 * [How to Vertically Align a Text Next to the Image](https://www.w3docs.com/snippets/css/how-to-vertically-align-text-next-to-an-image.html#:~:text=Put%20the%20image's%20maximum%20width,on%20the%20text's%20left%20side.)
 * [vertical middle aligned image and text side-by-side in CSS](https://stackoverflow.com/questions/35101813/vertical-middle-aligned-image-and-text-side-by-side-in-css)
+* [Docker with Strapi V4](https://blog.dehlin.dev/docker-with-strapi-v4)
 
 ## 📚 Learn more
 
